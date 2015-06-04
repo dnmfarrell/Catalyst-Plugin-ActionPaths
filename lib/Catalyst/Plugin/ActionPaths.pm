@@ -42,6 +42,7 @@ sub get_action_paths
   {
     if (ref $dt eq 'Catalyst::DispatchType::Path')
     {
+      # taken from Catalyst::DispatchType::Path
       foreach my $path ( sort keys %{ $dt->_paths } ) {
         foreach my $action ( @{ $dt->_paths->{$path} } ) {
           my $args  = $action->number_of_args;
@@ -58,6 +59,7 @@ sub get_action_paths
     }
     elsif (ref $dt eq 'Catalyst::DispatchType::Chained')
     {
+      # taken from Catalyst::DispatchType::Chained
       ENDPOINT: foreach my $endpoint (
                     sort { $a->reverse cmp $b->reverse }
                              @{ $dt->_endpoints }
