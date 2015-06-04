@@ -1,0 +1,45 @@
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+Catalyst::Plugin::ActionPaths - get Catalyst actions with example paths included!
+
+=head1 VERSION
+
+version 0.01
+
+=head1 DESCRIPTION
+
+This is an early-release plugin for Catalyst. It adds the method C<get_action_paths> to the Catalyst context object.
+
+This plugin makes it easier to retrieve every loaded action path and chained path in your Catalyst application, usually for testing purposes.
+
+To use the plugin, just install it and append the plugin name in your application class e.g. F<lib/MyApp.pm>
+
+  use Catalyst 'ActionPaths';
+
+=head1 METHODS
+
+=head2 get_action_paths
+
+Returns an arrayref of C<Catalyst::Actions> objects, with a path attribute added. The path is an example path for the action, e.g.:
+
+  my $actions = $c->get_action_paths;
+
+  print $actions->[0]{path}; # /some/*/path/*
+
+=head1 AUTHOR
+
+David Farrell <dfarrell@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2015 by David Farrell.
+
+This is free software, licensed under:
+
+  The (two-clause) FreeBSD License
+
+=cut
