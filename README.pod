@@ -16,7 +16,7 @@ This is an early-release plugin for Catalyst. It adds the method C<get_action_pa
 
 This plugin makes it easier to retrieve every loaded action path and chained path in your Catalyst application, usually for testing purposes.
 
-To use the plugin, just install it and append the plugin name in your application class e.g. F<lib/MyApp.pm>
+To use the plugin just install it and append the plugin name in your application class e.g. F<lib/MyApp.pm>
 
   use Catalyst 'ActionPaths';
 
